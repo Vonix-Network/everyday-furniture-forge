@@ -29,5 +29,16 @@ public final class EverydayFurnitureMod {
  public static final RegistryObject<Block> TOILET=b("toilet",Block.box(2,0,2,14,12,14)); public static final RegistryObject<Item> TOILET_ITEM=i("toilet",TOILET);
  public static final RegistryObject<Block> FRIDGE=b("fridge",TALL); public static final RegistryObject<Item> FRIDGE_ITEM=i("fridge",FRIDGE);
  public static final RegistryObject<Block> COFFEE_MAKER=b("coffee_maker",Block.box(2,0,2,14,10,14)); public static final RegistryObject<Item> COFFEE_MAKER_ITEM=i("coffee_maker",COFFEE_MAKER);
+
+ public static final RegistryObject<Block> DINING_TABLE=b("dining_table",Block.box(0,0,0,16,12,16)); public static final RegistryObject<Item> DINING_TABLE_ITEM=i("dining_table",DINING_TABLE);
+ public static final RegistryObject<Block> BAR_STOOL=b("bar_stool",Block.box(3,0,3,13,12,13)); public static final RegistryObject<Item> BAR_STOOL_ITEM=i("bar_stool",BAR_STOOL);
+ public static final RegistryObject<Block> KITCHEN_ISLAND=b("kitchen_island",Block.box(0,0,0,16,14,16)); public static final RegistryObject<Item> KITCHEN_ISLAND_ITEM=i("kitchen_island",KITCHEN_ISLAND);
+ public static final RegistryObject<Block> WALL_CABINET=b("wall_cabinet",Block.box(0,2,0,16,16,14)); public static final RegistryObject<Item> WALL_CABINET_ITEM=i("wall_cabinet",WALL_CABINET);
+ public static final RegistryObject<Block> OVEN=b("oven",Block.box(1,0,1,15,16,15)); public static final RegistryObject<Item> OVEN_ITEM=i("oven",OVEN);
+ public static final RegistryObject<Block> MICROWAVE=b("microwave",Block.box(1,4,1,15,14,15)); public static final RegistryObject<Item> MICROWAVE_ITEM=i("microwave",MICROWAVE);
+ public static final RegistryObject<Block> DISHWASHER=b("dishwasher",Block.box(1,0,1,15,14,15)); public static final RegistryObject<Item> DISHWASHER_ITEM=i("dishwasher",DISHWASHER);
+ public static final RegistryObject<Block> TRASH_BIN=b("trash_bin",Block.box(2,0,2,14,14,14)); public static final RegistryObject<Item> TRASH_BIN_ITEM=i("trash_bin",TRASH_BIN);
+ public static final RegistryObject<Block> PLATE_RACK=b("plate_rack",Block.box(1,3,1,15,16,15)); public static final RegistryObject<Item> PLATE_RACK_ITEM=i("plate_rack",PLATE_RACK);
+ public static final RegistryObject<Block> KITCHEN_SHELF=b("kitchen_shelf",Block.box(0,5,0,16,8,16)); public static final RegistryObject<Item> KITCHEN_SHELF_ITEM=i("kitchen_shelf",KITCHEN_SHELF);
  public EverydayFurnitureMod(){IEventBus bus=FMLJavaModLoadingContext.get().getModEventBus(); BLOCKS.register(bus); ITEMS.register(bus);}
 }

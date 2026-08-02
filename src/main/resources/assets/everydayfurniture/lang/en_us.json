@@ -10,5 +10,15 @@
   "block.everydayfurniture.sink": "Sink",
   "block.everydayfurniture.toilet": "Toilet",
   "block.everydayfurniture.fridge": "Fridge",
-  "block.everydayfurniture.coffee_maker": "Coffee Maker"
+  "block.everydayfurniture.coffee_maker": "Coffee Maker",
+  "block.everydayfurniture.dining_table": "Dining Table",
+  "block.everydayfurniture.bar_stool": "Bar Stool",
+  "block.everydayfurniture.kitchen_island": "Kitchen Island",
+  "block.everydayfurniture.wall_cabinet": "Wall Cabinet",
+  "block.everydayfurniture.oven": "Oven",
+  "block.everydayfurniture.microwave": "Microwave",
+  "block.everydayfurniture.dishwasher": "Dishwasher",
+  "block.everydayfurniture.trash_bin": "Trash Bin",
+  "block.everydayfurniture.plate_rack": "Plate Rack",
+  "block.everydayfurniture.kitchen_shelf": "Kitchen Shelf"
 }
