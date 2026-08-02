@@ -1,0 +1,6 @@
+# Fairy Lights 1.0.1
+
+- Fixed the creative inventory entry showing an invalid/empty item model.
+- Replaced the placeholder cube with a valid bulb-and-cord model.
+- Removed the unused color block-state that was not connected to item variants.
+- Kept the Forge 1.18.2 server-authoritative toggle behavior.
