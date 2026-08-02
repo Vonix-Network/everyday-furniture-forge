@@ -14,7 +14,7 @@ public final class EverydayFurnitureMod {
  public static final String MOD_ID="everydayfurniture";
  public static final DeferredRegister<Block> BLOCKS=DeferredRegister.create(ForgeRegistries.BLOCKS,MOD_ID);
  public static final DeferredRegister<Item> ITEMS=DeferredRegister.create(ForgeRegistries.ITEMS,MOD_ID);
- private static RegistryObject<Block> b(String id,VoxelShape s){return BLOCKS.register(id,()->new FurnitureBlock(s));}
+ private static RegistryObject<Block> b(String id,VoxelShape s){return BLOCKS.register(id,()->new FurnitureBlock(s, id.equals("oven") || id.equals("microwave") || id.equals("coffee_maker") ? id : ""));}
  private static RegistryObject<Item> i(String id,RegistryObject<Block> b){return ITEMS.register(id,()->new BlockItem(b.get(),new Item.Properties().tab(EverydayFurnitureTab.TAB)));}
  private static final VoxelShape SEAT=Block.box(1,0,1,15,10,15), TABLE_SHAPE=Block.box(1,0,1,15,12,15), TALL=Block.box(1,0,1,15,16,15);
  public static final RegistryObject<Block> CHAIR=b("chair",SEAT); public static final RegistryObject<Item> CHAIR_ITEM=i("chair",CHAIR);

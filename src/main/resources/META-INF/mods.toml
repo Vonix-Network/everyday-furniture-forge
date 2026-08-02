@@ -4,7 +4,7 @@ license="MIT"
 issueTrackerURL="https://github.com/Vonix-Network/everyday-furniture-forge/issues"
 [[mods]]
 modId="everydayfurniture"
-version="1.1.0+1.18.2"
+version="1.2.0+1.18.2"
 displayName="Everyday Furniture"
 authors="Vonix.Network"
 description='''Original everyday household furniture with included 3D block models for Forge 1.18.2.'''
@@ -19,4 +19,11 @@ modId="minecraft"
 mandatory=true
 versionRange="[1.18.2,1.19)"
 ordering="NONE"
+side="BOTH"
+
+[[dependencies.everydayfurniture]]
+modId="culinarydragons"
+mandatory=false
+versionRange="[0.2.0,)"
+ordering="AFTER"
 side="BOTH"
