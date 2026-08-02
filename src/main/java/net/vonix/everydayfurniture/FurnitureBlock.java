@@ -11,6 +11,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
@@ -18,22 +19,25 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 public final class FurnitureBlock extends Block {
     private final VoxelShape shape;
     private final String culinaryStation;
-    public FurnitureBlock(VoxelShape shape) { this(shape, ""); }
-    public FurnitureBlock(VoxelShape shape, String culinaryStation) {
+    private final float seatHeight;
+    public FurnitureBlock(VoxelShape shape, String culinaryStation, float seatHeight) {
         super(BlockBehaviour.Properties.of(net.minecraft.world.level.material.Material.WOOD).strength(1.5f).noOcclusion());
-        this.shape = shape;
-        this.culinaryStation = culinaryStation;
+        this.shape = shape; this.culinaryStation = culinaryStation; this.seatHeight = seatHeight;
     }
     @Override public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) { return shape; }
     @Override public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+        if (seatHeight > 0 && player.getItemInHand(hand).isEmpty()) {
+            if (!level.isClientSide && !player.isPassenger()) {
+                boolean occupied = !level.getEntitiesOfClass(FurnitureSeatEntity.class, new AABB(pos).inflate(.45)).isEmpty();
+                if (!occupied) { FurnitureSeatEntity seat = new FurnitureSeatEntity(EverydayFurnitureMod.SEAT_ENTITY.get(), level); seat.setPos(pos.getX() + .5, pos.getY() + seatHeight, pos.getZ() + .5); level.addFreshEntity(seat); player.startRiding(seat); }
+            }
+            return InteractionResult.sidedSuccess(level.isClientSide);
+        }
         if (culinaryStation.isEmpty()) return InteractionResult.PASS;
         if (level.isClientSide) return InteractionResult.SUCCESS;
         ItemStack result = CulinaryCompat.process(culinaryStation, player.getItemInHand(hand));
         if (result.isEmpty()) {
-            String message = CulinaryCompat.loaded()
-                    ? "This appliance cannot process that item."
-                    : "Install Culinary Dragons to use this appliance.";
-            player.displayClientMessage(new TextComponent(message), true);
+            player.displayClientMessage(new TextComponent(CulinaryCompat.loaded() ? "This appliance cannot process that item." : "Install Culinary Dragons to use this appliance."), true);
             return InteractionResult.CONSUME;
         }
         ItemStack held = player.getItemInHand(hand);
