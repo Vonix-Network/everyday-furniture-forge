@@ -1,6 +1,6 @@
 # Everyday Furniture — Forge 1.18.2
 
-## Version 1.2.0
+## Version 1.2.1
 
 Adds dining table, bar stool, kitchen island, wall cabinet, oven, microwave, dishwasher, trash bin, plate rack, and kitchen shelf.
 
@@ -17,7 +17,7 @@ Original, modelled household furniture for everyday Minecraft builds. This relea
 ```bash
 ./gradlew clean build
 ```
-The distributable JAR is written to `build/libs/everyday-furniture-forge-1.18.2-1.2.0+1.18.2.jar`.
+The distributable JAR is written to `build/libs/everyday-furniture-forge-1.18.2-1.2.1+1.18.2.jar`.
 
 ## Culinary Dragons compatibility boundary
 
@@ -29,6 +29,6 @@ Compatibility audit: Culinary Dragons registry names were checked against the fu
 
 When Culinary Dragons is present, the Everyday Furniture `oven`, `microwave`, and `coffee_maker` become optional compatibility appliances. They call Culinary Dragons-owned item IDs at runtime and return Culinary Dragons-owned outputs; Everyday Furniture registers none of those foods, drinks, alcohol items, or recipes. Without Culinary Dragons installed, the furniture mod still loads and these appliances show an install guidance message.
 
-Current bridge recipes: oven (potato, beef, carrot), microwave (grape juice, vegetable stew), and coffee maker (apple, grapes, mixed berries, cherries). The bridge is server-authoritative and guarded by the optional `culinarydragons` dependency.
+Current bridge recipes: oven (potato, beef, carrot), microwave (cocoa beans → hot chocolate, vegetable stew), and coffee maker (apple, grapes, mixed berries, cherries). Grape juice is no longer accepted by the microwave. The bridge is server-authoritative and guarded by the optional `culinarydragons` dependency.
 
 This is an original implementation. Interaction features (functional storage, seating, appliances) are planned follow-up scope; the current release is placeable decorative furniture.

@@ -24,7 +24,7 @@ public final class CulinaryCompat {
                 default -> null;
             };
             case "microwave" -> switch (in) {
-                case "culinarydragons:grape_juice" -> "hot_chocolate";
+                case "minecraft:cocoa_beans" -> "hot_chocolate";
                 case "culinarydragons:vegetable_stew" -> "cooked_meat_platter";
                 default -> null;
             };
