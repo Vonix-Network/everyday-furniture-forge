@@ -1,1 +1,1 @@
-{"variants":{"":{"model":"everydayfurniture:block/microwave"}}}
+{"variants":{"facing=north":{"model":"everydayfurniture:block/microwave"},"facing=east":{"model":"everydayfurniture:block/microwave","y":90},"facing=south":{"model":"everydayfurniture:block/microwave","y":180},"facing=west":{"model":"everydayfurniture:block/microwave","y":270}}}

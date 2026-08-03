@@ -1,1 +1,1 @@
-{"variants":{"":{"model":"everydayfurniture:block/bookshelf"}}}
+{"variants":{"facing=north":{"model":"everydayfurniture:block/bookshelf"},"facing=east":{"model":"everydayfurniture:block/bookshelf","y":90},"facing=south":{"model":"everydayfurniture:block/bookshelf","y":180},"facing=west":{"model":"everydayfurniture:block/bookshelf","y":270}}}

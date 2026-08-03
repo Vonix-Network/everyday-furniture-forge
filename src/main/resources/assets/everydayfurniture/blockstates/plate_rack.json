@@ -1,1 +1,1 @@
-{"variants":{"":{"model":"everydayfurniture:block/plate_rack"}}}
+{"variants":{"facing=north":{"model":"everydayfurniture:block/plate_rack"},"facing=east":{"model":"everydayfurniture:block/plate_rack","y":90},"facing=south":{"model":"everydayfurniture:block/plate_rack","y":180},"facing=west":{"model":"everydayfurniture:block/plate_rack","y":270}}}

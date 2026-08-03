@@ -1,1 +1,1 @@
-{"variants":{"":{"model":"everydayfurniture:block/kitchen_island"}}}
+{"variants":{"facing=north":{"model":"everydayfurniture:block/kitchen_island"},"facing=east":{"model":"everydayfurniture:block/kitchen_island","y":90},"facing=south":{"model":"everydayfurniture:block/kitchen_island","y":180},"facing=west":{"model":"everydayfurniture:block/kitchen_island","y":270}}}

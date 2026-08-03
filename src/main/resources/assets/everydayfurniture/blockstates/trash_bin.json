@@ -1,1 +1,1 @@
-{"variants":{"":{"model":"everydayfurniture:block/trash_bin"}}}
+{"variants":{"facing=north":{"model":"everydayfurniture:block/trash_bin"},"facing=east":{"model":"everydayfurniture:block/trash_bin","y":90},"facing=south":{"model":"everydayfurniture:block/trash_bin","y":180},"facing=west":{"model":"everydayfurniture:block/trash_bin","y":270}}}

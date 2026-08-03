@@ -1,8 +1,10 @@
 # Everyday Furniture — Forge 1.18.2
 
-## Version 1.4.0
+## Version 1.4.1
 
 Original everyday household furniture with actual pixel-art textures, reference-guided geometry, and working interactions.
+
+All horizontal furniture now stores a `facing` block state from placement and rotates with the block. Right-click placement uses the opposite of the player direction so fronts face the player. Rotation and mirror operations preserve the orientation.
 
 This release replaces the original cube placeholders with original multi-element block models based on real-world furniture silhouettes: chairs have legs, seats, and backs; sofas have cushions, backs, and arms; tables have tops and legs; cabinetry has doors, trim, and handles; appliances have fronts, glass, handles, and controls; sinks have a rim, basin, drain, and faucet; and shelves/racks use open separated boards. Public furniture references were used for silhouette and proportion guidance only; no third-party textures or model files were copied.
 
@@ -29,4 +31,4 @@ This release replaces the original cube placeholders with original multi-element
 ```bash
 ./gradlew clean build
 ```
-The distributable JAR is written to `build/libs/everyday-furniture-forge-1.18.2-1.4.0+1.18.2.jar`.
+The distributable JAR is written to `build/libs/everyday-furniture-forge-1.18.2-1.4.1+1.18.2.jar`.

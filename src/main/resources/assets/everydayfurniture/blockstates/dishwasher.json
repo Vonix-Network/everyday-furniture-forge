@@ -1,1 +1,1 @@
-{"variants":{"":{"model":"everydayfurniture:block/dishwasher"}}}
+{"variants":{"facing=north":{"model":"everydayfurniture:block/dishwasher"},"facing=east":{"model":"everydayfurniture:block/dishwasher","y":90},"facing=south":{"model":"everydayfurniture:block/dishwasher","y":180},"facing=west":{"model":"everydayfurniture:block/dishwasher","y":270}}}
