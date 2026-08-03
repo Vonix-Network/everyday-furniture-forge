@@ -1,8 +1,10 @@
 # Everyday Furniture — Forge 1.18.2
 
-## Version 1.3.1
+## Version 1.4.0
 
-Original everyday household furniture with actual pixel-art textures and working interactions.
+Original everyday household furniture with actual pixel-art textures, reference-guided geometry, and working interactions.
+
+This release replaces the original cube placeholders with original multi-element block models based on real-world furniture silhouettes: chairs have legs, seats, and backs; sofas have cushions, backs, and arms; tables have tops and legs; cabinetry has doors, trim, and handles; appliances have fronts, glass, handles, and controls; sinks have a rim, basin, drain, and faucet; and shelves/racks use open separated boards. Public furniture references were used for silhouette and proportion guidance only; no third-party textures or model files were copied.
 
 ### Functional furniture
 - Persistent 27-slot storage on cabinets, fridges, counters, and other enclosed furniture.
@@ -27,4 +29,4 @@ Original everyday household furniture with actual pixel-art textures and working
 ```bash
 ./gradlew clean build
 ```
-The distributable JAR is written to `build/libs/everyday-furniture-forge-1.18.2-1.3.1+1.18.2.jar`.
+The distributable JAR is written to `build/libs/everyday-furniture-forge-1.18.2-1.4.0+1.18.2.jar`.

@@ -1,1 +1,11 @@
-{"parent":"minecraft:block/cube_all","textures":{"all":"everydayfurniture:block/lamp"}}
+{
+  "credit":"Everyday Furniture original table lamp",
+  "ambientocclusion":true,
+  "textures":{"main":"everydayfurniture:block/lamp","metal":"everydayfurniture:block/metal_trim","shade":"everydayfurniture:block/ceramic"},
+  "elements":[
+    {"from":[6,0,6],"to":[10,2,10],"faces":{"down":{"texture":"#metal"},"up":{"texture":"#metal"},"north":{"texture":"#metal"},"south":{"texture":"#metal"},"west":{"texture":"#metal"},"east":{"texture":"#metal"}}},
+    {"from":[7,2,7],"to":[9,11,9],"faces":{"down":{"texture":"#metal"},"up":{"texture":"#metal"},"north":{"texture":"#metal"},"south":{"texture":"#metal"},"west":{"texture":"#metal"},"east":{"texture":"#metal"}}},
+    {"from":[4,10,4],"to":[12,13,12],"faces":{"down":{"texture":"#shade"},"up":{"texture":"#shade"},"north":{"texture":"#shade"},"south":{"texture":"#shade"},"west":{"texture":"#shade"},"east":{"texture":"#shade"}}},
+    {"from":[3,13,3],"to":[13,16,13],"faces":{"down":{"texture":"#shade"},"up":{"texture":"#shade"},"north":{"texture":"#shade"},"south":{"texture":"#shade"},"west":{"texture":"#shade"},"east":{"texture":"#shade"}}}
+  ]
+}
