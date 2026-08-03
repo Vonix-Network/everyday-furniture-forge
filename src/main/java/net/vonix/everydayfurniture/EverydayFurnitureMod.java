@@ -7,6 +7,7 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -55,9 +56,9 @@ public final class EverydayFurnitureMod {
     public static final RegistryObject<Block> DISHWASHER = storage("dishwasher", Block.box(1, 0, 1, 15, 14, 15)); public static final RegistryObject<Item> DISHWASHER_ITEM = item("dishwasher", DISHWASHER);
     public static final RegistryObject<Block> TRASH_BIN = BLOCKS.register("trash_bin", () -> new TrashBinBlock(Block.box(2, 0, 2, 14, 14, 14))); public static final RegistryObject<Item> TRASH_BIN_ITEM = item("trash_bin", TRASH_BIN);
     public static final RegistryObject<Block> PLATE_RACK = storage("plate_rack", Block.box(1, 3, 1, 15, 16, 15)); public static final RegistryObject<Item> PLATE_RACK_ITEM = item("plate_rack", PLATE_RACK);
-    public static final RegistryObject<Block> KITCHEN_SHELF = storage("kitchen_shelf", Block.box(0, 5, 0, 16, 8, 16)); public static final RegistryObject<Item> KITCHEN_SHELF_ITEM = item("kitchen_shelf", KITCHEN_SHELF);
+    public static final RegistryObject<Block> KITCHEN_SHELF = BLOCKS.register("kitchen_shelf", () -> new OpenShelfBlock()); public static final RegistryObject<Item> KITCHEN_SHELF_ITEM = item("kitchen_shelf", KITCHEN_SHELF);
 
-    public static final RegistryObject<BlockEntityType<StorageBlockEntity>> STORAGE_BLOCK_ENTITY = BLOCK_ENTITIES.register("storage", () -> BlockEntityType.Builder.of(StorageBlockEntity::new, BEDSIDE_TABLE.get(), CABINET.get(), BOOKSHELF.get(), KITCHEN_COUNTER.get(), FRIDGE.get(), KITCHEN_ISLAND.get(), WALL_CABINET.get(), DISHWASHER.get(), PLATE_RACK.get(), KITCHEN_SHELF.get()).build(null));
+    public static final RegistryObject<BlockEntityType<StorageBlockEntity>> STORAGE_BLOCK_ENTITY = BLOCK_ENTITIES.register("storage", () -> BlockEntityType.Builder.of(StorageBlockEntity::new, BEDSIDE_TABLE.get(), CABINET.get(), BOOKSHELF.get(), KITCHEN_COUNTER.get(), FRIDGE.get(), KITCHEN_ISLAND.get(), WALL_CABINET.get(), DISHWASHER.get(), PLATE_RACK.get()).build(null));
     public static final RegistryObject<EntityType<FurnitureSeatEntity>> SEAT_ENTITY = ENTITY_TYPES.register("seat", () -> EntityType.Builder.of(FurnitureSeatEntity::new, MobCategory.MISC).sized(.01f, .01f).noSave().noSummon().clientTrackingRange(10).updateInterval(1).build(MOD_ID + ":seat"));
 
     public EverydayFurnitureMod() { IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus(); BLOCKS.register(bus); ITEMS.register(bus); BLOCK_ENTITIES.register(bus); ENTITY_TYPES.register(bus); }
