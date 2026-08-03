@@ -41,7 +41,7 @@ public final class FurnitureBlock extends Block {
         if (seatHeight > 0 && player.getItemInHand(hand).isEmpty()) {
             if (!level.isClientSide && !player.isPassenger()) {
                 boolean occupied = !level.getEntitiesOfClass(FurnitureSeatEntity.class, new AABB(pos).inflate(.45)).isEmpty();
-                if (!occupied) { FurnitureSeatEntity seat = new FurnitureSeatEntity(EverydayFurnitureMod.SEAT_ENTITY.get(), level); seat.setPos(pos.getX() + .5, pos.getY() + seatHeight, pos.getZ() + .5); level.addFreshEntity(seat); player.startRiding(seat); }
+                if (!occupied) { FurnitureSeatEntity seat = new FurnitureSeatEntity(EverydayFurnitureMod.SEAT_ENTITY.get(), level); seat.setPos(pos.getX() + .5, pos.getY() + seatHeight, pos.getZ() + .5); seat.setYRot(state.getValue(FACING).toYRot()); level.addFreshEntity(seat); player.startRiding(seat, false); }
             }
             return InteractionResult.sidedSuccess(level.isClientSide);
         }
